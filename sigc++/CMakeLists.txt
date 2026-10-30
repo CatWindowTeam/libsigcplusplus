@@ -25,7 +25,7 @@ set (SIGCPP_LIB_NAME sigc-${SIGCXX_API_VERSION})
 
 option(SIGCPP_STATIC "Build Static library?" OFF)
 if(SIGCPP_STATIC)
-	add_definitions(-DLIBSIGCXX_STATIC)
+	add_definitions(-DLIBSIGCXX_STATIC=1)
 	add_library(${SIGCPP_LIB_NAME} STATIC ${SOURCE_FILES})
 else()
 	add_library(${SIGCPP_LIB_NAME} SHARED ${SOURCE_FILES})
